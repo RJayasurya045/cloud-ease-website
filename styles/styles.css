@@ -1,0 +1,296 @@
+/* CSS Variables for Colors */
+:root {
+    --primary-color: #007bff;
+    --primary-light: #00c6ff;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-heavy: rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+    background-color: #f1f1f1;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+/* Hero Section */
+#hero {
+    height: 90vh;
+    background: url('https://source.unsplash.com/1600x900/?cloud-computing') center center/cover no-repeat;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.hero-content h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-light);
+    color: #ffffff;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#about p, #contact p {
+    max-width: 600px;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Service Cards */
+#services .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.service-cards .card {
+    padding: 2rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    max-width: 100%;
+}
+
+.service-cards .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px var(--shadow-heavy);
+}
+
+.service-cards img {
+    width: 60px;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+#testimonials {
+    background: #f1f9ff;
+    padding: 4rem 0;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    padding: 2rem;
+    max-width: 280px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    font-style: italic;
+}
+
+.testimonial-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-top-btn.visible {
+    display: block;
+    opacity: 0.8;
+}
+
+.scroll-top-btn:hover {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .service-cards, .testimonial-cards {
+        flex-direction: column;
+    }
+}
